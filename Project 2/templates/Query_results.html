@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <title>Query Results!</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="outerDiv">
+    <div class="innerDiv">
+        <h1> Query Results Page </h1>
+    <table class="gil">
+        <caption> <u> Query 1: </u> </caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total Sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in query_result_a %}
+                <tr>
+                    <td>{{ result.Name }}</td>
+                    <td>{{ result.spent}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <table class="gil">
+        <caption> <u> Query 2: </u> </caption>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in query_result_b %}
+                <tr>
+                    <td>{{ result.Symbol }}</td>
+                    <td>{{ result.Name }}</td>
+                    <td>{{ result.Quantity }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <table class="gil">
+        <caption> <u> Query 3: </u> </caption>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Buyers Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for result in query_result_c %}
+                <tr>
+                    <td>{{ result.Symbol }}</td>
+                    <td>{{ result.BuyersNumber }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br><br>
+    <div class="donny">
+        <a href="{% url 'index' %}">Home Page</a><br>
+        <a href="{% url 'Add_Transaction' %}">Add Transaction</a><br>
+        <a href="{% url 'Buy_Stocks' %}">Buy Stocks</a>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<head> 
+    <meta charset="UTF-8">
+    <title>Add Transaction</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Form</title>
+</head>
+<body>
+<h2>Make your Transactions here!</h2>
+<div class="ben">
+    <form method="POST" action="{% url 'Add_Transaction' %}" class="raque">
+        {% csrf_token %}
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" placeholder="Enter your ID" required><br>
+        <label for="transactionSum">Transaction Sum:</label>
+        <input type="number" id="transactionSum" name="transactionSum" placeholder="Enter amount" required><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<div class="hodi">
+    {% if errormessage %}
+        <p>{{ errormessage }}</p>
+    {% endif %}
+</div>
+
+</body>
+</html>
+
+</body>
+<body>
+    <h2>Top 10 Most Recent Transactions</h2>
+    <table class="gil" style="border: 3px solid #000000;">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>ID</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in recent_transactions %}
+                <tr>
+                    <td>{{ transaction.tdate }}</td>
+                    <td>{{ transaction.id_id }}</td>
+                    <td>{{ transaction.tamount }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <div class="donny">
+        <a href="{% url 'index' %}">Home Page</a>
+        <br>
+        <a href="{% url 'Buy_Stocks' %}">Buy Stocks</a>
+        <br>
+        <a href="{% url 'Query_results' %}">Query Results</a>
+    </div>
+</body>

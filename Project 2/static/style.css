@@ -1,0 +1,96 @@
+body{
+    background-color: #b4cafa;
+}
+th, td {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}
+
+thead th {
+    border: 1px solid #000000; /* Add this line */
+    background-color: #f2f2f2;
+}
+/* Centering tables */
+.gil {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #778eec;
+    border: 3px solid #000000;
+}
+
+.hodi {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed for vertical alignment */
+}
+
+.raque {
+    display: inline-block; /* Adjust display property */
+    background-color: #778eec;
+    padding: 20px; /* Add padding inside the form container */
+    border: 1px solid #100f0f; /* Add border around the form container */
+    border-radius: 5px; /* Optional: add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add box shadow for a lifted effect */
+}
+
+
+.raque label,
+.raque input {
+    display: block; /* Display label and input as block elements */
+    margin-bottom: 10px; /* Add margin between label-input pairs */
+}
+
+.ben {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.donny {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.outerDiv {
+    width: 100%;
+    margin: auto;
+}
+
+.innerDiv {
+    margin: auto;
+}
+
+.donny img {
+    margin: auto;
+}
+
+.donny a {
+    margin: auto;
+}
+
+h1{
+    color: #001780;
+    text-align: center;
+}
+
+h2{
+    color: darkslategrey;
+    text-align: center;
+}
+
+.rectangle{
+    background-color: deepskyblue;
+    text-align: center;
+    border: 6px outset black;
+    width: 500px;
+}
+
+caption {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 800;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<head> 
+    <meta charset="UTF-8">
+    <title>Stocks App Website</title>
+</head>
+<body> 
+    <h1>Stocks App Website</h1>
+    <div class="donny">
+        <img src="{% static "stockHPPhoto.jpeg" %}" alt="stocks photo">
+    </div>
+    <h2>Raque And Gil's Stock website where you can make the right decisions!</h2>
+    <div class="donny">
+        <a href="{% url 'Query_results' %}">Query Results</a>
+    </div>
+        <br>
+    <div class="donny">
+        <a href="{% url 'Add_Transaction' %}">Add Transaction</a>
+    </div>
+        <br>
+    <div class="donny">
+        <a href="{% url 'Buy_Stocks' %}">Buy Stocks</a>
+    </div>
+    
+</body>
+</html>
